@@ -1,0 +1,545 @@
+%PDF-1.4
+%ASCII
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 15 0 R /F2 16 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 1926 >>
+stream
+BT
+/F2 20 Tf
+1 0 0 1 56 745 Tm
+(Linear Regression House Price Predictor) Tj
+/F2 14 Tf
+1 0 0 1 56 715 Tm
+(Task 1 Machine Learning Report) Tj
+/F2 13 Tf
+1 0 0 1 56 681 Tm
+(Project Objective) Tj
+/F1 10 Tf
+1 0 0 1 56 658 Tm
+(The objective of this task was to build and evaluate a Linear Regression model for house) Tj
+/F1 10 Tf
+1 0 0 1 56 644 Tm
+(price prediction using the California Housing dataset.) Tj
+/F1 10 Tf
+1 0 0 1 56 630 Tm
+(The project introduces the complete machine learning workflow, starting from data) Tj
+/F1 10 Tf
+1 0 0 1 56 616 Tm
+(loading and ending with evaluation, visualization, model saving, and reporting.) Tj
+/F2 13 Tf
+1 0 0 1 56 592 Tm
+(Work Completed) Tj
+/F1 10 Tf
+1 0 0 1 56 569 Tm
+(- Loaded the California Housing dataset from an uploaded CSV file.) Tj
+/F1 10 Tf
+1 0 0 1 56 555 Tm
+(- Explored the data using summary statistics, missing value checks, distributions, and) Tj
+/F1 10 Tf
+1 0 0 1 56 541 Tm
+(  correlations.) Tj
+/F1 10 Tf
+1 0 0 1 56 527 Tm
+(- Preprocessed the dataset by handling missing values, engineering features, and) Tj
+/F1 10 Tf
+1 0 0 1 56 513 Tm
+(  encoding categorical columns.) Tj
+/F1 10 Tf
+1 0 0 1 56 499 Tm
+(- Split the data into training and testing sets.) Tj
+/F1 10 Tf
+1 0 0 1 56 485 Tm
+(- Trained a LinearRegression model using scikit-learn.) Tj
+/F1 10 Tf
+1 0 0 1 56 471 Tm
+(- Evaluated the model using MAE, RMSE, and R2 score.) Tj
+/F1 10 Tf
+1 0 0 1 56 457 Tm
+(- Created prediction and residual plots to understand model performance.) Tj
+/F1 10 Tf
+1 0 0 1 56 443 Tm
+(- Saved the trained model for future prediction use.) Tj
+/F2 13 Tf
+1 0 0 1 56 419 Tm
+(Deliverables) Tj
+/F1 10 Tf
+1 0 0 1 56 396 Tm
+(- Jupyter notebook with code, EDA, model training, plots, and comments.) Tj
+/F1 10 Tf
+1 0 0 1 56 382 Tm
+(- Short PDF report summarizing dataset, EDA, model, metrics, and improvement ideas.) Tj
+/F1 10 Tf
+1 0 0 1 56 368 Tm
+(- Optional saved model output from the notebook.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 15 0 R /F2 16 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 2147 >>
+stream
+BT
+/F2 18 Tf
+1 0 0 1 56 745 Tm
+(Dataset and Preprocessing) Tj
+/F2 13 Tf
+1 0 0 1 56 707 Tm
+(Dataset Used) Tj
+/F1 10 Tf
+1 0 0 1 56 684 Tm
+(The dataset used in the executed notebook was the California Housing dataset uploaded as) Tj
+/F1 10 Tf
+1 0 0 1 56 670 Tm
+(housing.csv. This dataset contains information about housing blocks in California and is) Tj
+/F1 10 Tf
+1 0 0 1 56 656 Tm
+(commonly used for regression practice.) Tj
+/F1 10 Tf
+1 0 0 1 56 642 Tm
+(The prediction target was MedHouseVal, which represents the median house value. The) Tj
+/F1 10 Tf
+1 0 0 1 56 628 Tm
+(target was scaled into 100,000 dollar units so that the output remains consistent with) Tj
+/F1 10 Tf
+1 0 0 1 56 614 Tm
+(the standard California Housing dataset format.) Tj
+/F2 13 Tf
+1 0 0 1 56 590 Tm
+(Dataset Shape) Tj
+/F1 10 Tf
+1 0 0 1 56 567 Tm
+(- Total rows: 20,640) Tj
+/F1 10 Tf
+1 0 0 1 56 553 Tm
+(- Columns after preprocessing: 13) Tj
+/F1 10 Tf
+1 0 0 1 56 539 Tm
+(- Training rows: 16,512) Tj
+/F1 10 Tf
+1 0 0 1 56 525 Tm
+(- Testing rows: 4,128) Tj
+/F2 13 Tf
+1 0 0 1 56 501 Tm
+(Preprocessing Steps) Tj
+/F1 10 Tf
+1 0 0 1 56 478 Tm
+(The original CSV contained numeric variables such as longitude, latitude, housing age,) Tj
+/F1 10 Tf
+1 0 0 1 56 464 Tm
+(total rooms, total bedrooms, population, households, median income, and median house) Tj
+/F1 10 Tf
+1 0 0 1 56 450 Tm
+(value. It also included the categorical variable ocean_proximity.) Tj
+/F1 10 Tf
+1 0 0 1 56 436 Tm
+(Missing numeric values were checked and handled using median filling. This approach is) Tj
+/F1 10 Tf
+1 0 0 1 56 422 Tm
+(simple and avoids losing rows while keeping the preprocessing easy to understand.) Tj
+/F1 10 Tf
+1 0 0 1 56 408 Tm
+(Feature engineering was applied to make the raw count variables more useful. Total) Tj
+/F1 10 Tf
+1 0 0 1 56 394 Tm
+(rooms, total bedrooms, and households were converted into average room, average bedroom,) Tj
+/F1 10 Tf
+1 0 0 1 56 380 Tm
+(and average occupancy features.) Tj
+/F1 10 Tf
+1 0 0 1 56 366 Tm
+(The ocean_proximity column was converted into numeric one-hot encoded columns so that) Tj
+/F1 10 Tf
+1 0 0 1 56 352 Tm
+(the Linear Regression model could use it.) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 15 0 R /F2 16 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 2323 >>
+stream
+BT
+/F2 18 Tf
+1 0 0 1 56 745 Tm
+(Exploratory Data Analysis) Tj
+/F2 13 Tf
+1 0 0 1 56 707 Tm
+(EDA Purpose) Tj
+/F1 10 Tf
+1 0 0 1 56 684 Tm
+(Exploratory Data Analysis was performed to understand the dataset before model training.) Tj
+/F1 10 Tf
+1 0 0 1 56 670 Tm
+(This step helped identify the feature ranges, distributions, missing values, and) Tj
+/F1 10 Tf
+1 0 0 1 56 656 Tm
+(relationships between features and the target variable.) Tj
+/F2 13 Tf
+1 0 0 1 56 632 Tm
+(Checks Performed) Tj
+/F1 10 Tf
+1 0 0 1 56 609 Tm
+(- Used df.info\(\) to inspect column names, data types, and non-null counts.) Tj
+/F1 10 Tf
+1 0 0 1 56 595 Tm
+(- Used missing value counts to confirm whether any columns required imputation.) Tj
+/F1 10 Tf
+1 0 0 1 56 581 Tm
+(- Used descriptive statistics to understand mean, minimum, maximum, and quartile) Tj
+/F1 10 Tf
+1 0 0 1 56 567 Tm
+(  values.) Tj
+/F1 10 Tf
+1 0 0 1 56 553 Tm
+(- Plotted feature distributions to check skewness and unusual ranges.) Tj
+/F1 10 Tf
+1 0 0 1 56 539 Tm
+(- Created a correlation heatmap to compare relationships between features.) Tj
+/F1 10 Tf
+1 0 0 1 56 525 Tm
+(- Created a location-based scatter plot to visualize California housing prices) Tj
+/F1 10 Tf
+1 0 0 1 56 511 Tm
+(  geographically.) Tj
+/F2 13 Tf
+1 0 0 1 56 487 Tm
+(Main EDA Findings) Tj
+/F1 10 Tf
+1 0 0 1 56 464 Tm
+(Median income had the strongest positive correlation with median house value. This means) Tj
+/F1 10 Tf
+1 0 0 1 56 450 Tm
+(areas with higher median income generally had higher house prices.) Tj
+/F1 10 Tf
+1 0 0 1 56 436 Tm
+(Ocean proximity also mattered. Inland areas had a strong negative relationship with) Tj
+/F1 10 Tf
+1 0 0 1 56 422 Tm
+(house value, while near-bay and near-ocean locations tended to be more valuable.) Tj
+/F1 10 Tf
+1 0 0 1 56 408 Tm
+(Latitude and longitude were useful because they captured geographic patterns in) Tj
+/F1 10 Tf
+1 0 0 1 56 394 Tm
+(California housing prices. The location plot showed that house values were not evenly) Tj
+/F1 10 Tf
+1 0 0 1 56 380 Tm
+(distributed across the state.) Tj
+/F1 10 Tf
+1 0 0 1 56 366 Tm
+(Some variables were skewed, especially population and occupancy-related features. This) Tj
+/F1 10 Tf
+1 0 0 1 56 352 Tm
+(suggests that future versions of the model could benefit from transformations or outlier) Tj
+/F1 10 Tf
+1 0 0 1 56 338 Tm
+(handling.) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 15 0 R /F2 16 0 R >> >> /Contents 10 0 R >>
+endobj
+10 0 obj
+<< /Length 2278 >>
+stream
+BT
+/F2 18 Tf
+1 0 0 1 56 745 Tm
+(Model Training Methodology) Tj
+/F2 13 Tf
+1 0 0 1 56 707 Tm
+(Feature Selection) Tj
+/F1 10 Tf
+1 0 0 1 56 684 Tm
+(The target variable was MedHouseVal. All remaining numeric columns after preprocessing) Tj
+/F1 10 Tf
+1 0 0 1 56 670 Tm
+(were used as input features. These included income, location, housing age, population,) Tj
+/F1 10 Tf
+1 0 0 1 56 656 Tm
+(engineered household features, and encoded ocean-proximity categories.) Tj
+/F2 13 Tf
+1 0 0 1 56 632 Tm
+(Train-Test Split) Tj
+/F1 10 Tf
+1 0 0 1 56 609 Tm
+(The dataset was split into training and testing sets using an 80 percent training and 20) Tj
+/F1 10 Tf
+1 0 0 1 56 595 Tm
+(percent testing split. The random_state value was fixed so the results could be) Tj
+/F1 10 Tf
+1 0 0 1 56 581 Tm
+(reproduced.) Tj
+/F1 10 Tf
+1 0 0 1 56 567 Tm
+(The model was trained on 16,512 rows and tested on 4,128 rows. Keeping a separate test) Tj
+/F1 10 Tf
+1 0 0 1 56 553 Tm
+(set allowed the final metrics to measure performance on unseen data instead of only) Tj
+/F1 10 Tf
+1 0 0 1 56 539 Tm
+(measuring how well the model memorized the training data.) Tj
+/F2 13 Tf
+1 0 0 1 56 515 Tm
+(Model Used) Tj
+/F1 10 Tf
+1 0 0 1 56 492 Tm
+(The model used was LinearRegression from scikit-learn. Linear Regression is a good) Tj
+/F1 10 Tf
+1 0 0 1 56 478 Tm
+(baseline because it is fast, simple, and interpretable. It tries to learn a straight-) Tj
+/F1 10 Tf
+1 0 0 1 56 464 Tm
+(line relationship between the input features and the target value.) Tj
+/F2 13 Tf
+1 0 0 1 56 440 Tm
+(Why Linear Regression Was Suitable Here) Tj
+/F1 10 Tf
+1 0 0 1 56 417 Tm
+(- It satisfies the task requirement directly.) Tj
+/F1 10 Tf
+1 0 0 1 56 403 Tm
+(- It provides an easy-to-explain starting point for regression.) Tj
+/F1 10 Tf
+1 0 0 1 56 389 Tm
+(- Coefficients can be inspected to understand feature influence.) Tj
+/F1 10 Tf
+1 0 0 1 56 375 Tm
+(- It gives a baseline that can later be compared with stronger models.) Tj
+/F2 13 Tf
+1 0 0 1 56 351 Tm
+(Model Output) Tj
+/F1 10 Tf
+1 0 0 1 56 328 Tm
+(After training, the model was saved as california_linear_regression_model.pkl. The) Tj
+/F1 10 Tf
+1 0 0 1 56 314 Tm
+(notebook also included a small prediction function for estimating house value from new) Tj
+/F1 10 Tf
+1 0 0 1 56 300 Tm
+(input values.) Tj
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 15 0 R /F2 16 0 R >> >> /Contents 12 0 R >>
+endobj
+12 0 obj
+<< /Length 2365 >>
+stream
+BT
+/F2 18 Tf
+1 0 0 1 56 745 Tm
+(Evaluation Results) Tj
+/F2 13 Tf
+1 0 0 1 56 707 Tm
+(Metrics Used) Tj
+/F1 10 Tf
+1 0 0 1 56 684 Tm
+(Three evaluation metrics were used: Mean Absolute Error, Root Mean Squared Error, and R2) Tj
+/F1 10 Tf
+1 0 0 1 56 670 Tm
+(score.) Tj
+/F1 10 Tf
+1 0 0 1 56 656 Tm
+(MAE measures the average absolute difference between actual and predicted house values.) Tj
+/F1 10 Tf
+1 0 0 1 56 642 Tm
+(RMSE is similar but penalizes larger errors more strongly. R2 score measures how much of) Tj
+/F1 10 Tf
+1 0 0 1 56 628 Tm
+(the target variation is explained by the model.) Tj
+/F2 13 Tf
+1 0 0 1 56 604 Tm
+(Final Results) Tj
+/F1 10 Tf
+1 0 0 1 56 581 Tm
+(- MAE: 0.538797, which is about 53,880 dollars average absolute error.) Tj
+/F1 10 Tf
+1 0 0 1 56 567 Tm
+(- RMSE: 0.812622, which is about 81,262 dollars with larger errors penalized more) Tj
+/F1 10 Tf
+1 0 0 1 56 553 Tm
+(  heavily.) Tj
+/F1 10 Tf
+1 0 0 1 56 539 Tm
+(- R2 Score: 0.496070, meaning the model explains about 49.6 percent of the test-set) Tj
+/F1 10 Tf
+1 0 0 1 56 525 Tm
+(  variance.) Tj
+/F2 13 Tf
+1 0 0 1 56 501 Tm
+(Interpretation) Tj
+/F1 10 Tf
+1 0 0 1 56 478 Tm
+(The Linear Regression model was able to capture some important patterns in the dataset,) Tj
+/F1 10 Tf
+1 0 0 1 56 464 Tm
+(especially the relationship between income, location, and house value. However, the R2) Tj
+/F1 10 Tf
+1 0 0 1 56 450 Tm
+(score shows that the model explains only about half of the variation in house prices.) Tj
+/F1 10 Tf
+1 0 0 1 56 436 Tm
+(This result is reasonable for a baseline model. Housing prices depend on many nonlinear) Tj
+/F1 10 Tf
+1 0 0 1 56 422 Tm
+(relationships and interactions, so a simple linear model cannot capture every pattern.) Tj
+/F2 13 Tf
+1 0 0 1 56 398 Tm
+(Visual Evaluation) Tj
+/F1 10 Tf
+1 0 0 1 56 375 Tm
+(The predicted vs actual scatter plot showed that predictions followed the overall) Tj
+/F1 10 Tf
+1 0 0 1 56 361 Tm
+(direction of the actual values, but there was still noticeable spread. This means the) Tj
+/F1 10 Tf
+1 0 0 1 56 347 Tm
+(model was not perfectly accurate for individual houses.) Tj
+/F1 10 Tf
+1 0 0 1 56 333 Tm
+(The residual plot showed remaining patterns in the errors. Ideally, residuals should) Tj
+/F1 10 Tf
+1 0 0 1 56 319 Tm
+(look random, so visible patterns suggest that the model is underfitting some parts of) Tj
+/F1 10 Tf
+1 0 0 1 56 305 Tm
+(the data.) Tj
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 15 0 R /F2 16 0 R >> >> /Contents 14 0 R >>
+endobj
+14 0 obj
+<< /Length 2503 >>
+stream
+BT
+/F2 18 Tf
+1 0 0 1 56 745 Tm
+(Conclusion and Improvement Ideas) Tj
+/F2 13 Tf
+1 0 0 1 56 707 Tm
+(Conclusion) Tj
+/F1 10 Tf
+1 0 0 1 56 684 Tm
+(This task successfully completed the full beginner-friendly machine learning lifecycle.) Tj
+/F1 10 Tf
+1 0 0 1 56 670 Tm
+(The dataset was loaded, explored, preprocessed, split into train and test sets, used to) Tj
+/F1 10 Tf
+1 0 0 1 56 656 Tm
+(train a Linear Regression model, evaluated using standard regression metrics, and) Tj
+/F1 10 Tf
+1 0 0 1 56 642 Tm
+(documented in a notebook and report.) Tj
+/F1 10 Tf
+1 0 0 1 56 628 Tm
+(The model provides a useful baseline for California house price prediction. Median) Tj
+/F1 10 Tf
+1 0 0 1 56 614 Tm
+(income and location-based features were the most important signals. The results show) Tj
+/F1 10 Tf
+1 0 0 1 56 600 Tm
+(that Linear Regression is understandable and easy to use, but it has limitations for a) Tj
+/F1 10 Tf
+1 0 0 1 56 586 Tm
+(complex real-world problem like housing prices.) Tj
+/F2 13 Tf
+1 0 0 1 56 562 Tm
+(Limitations) Tj
+/F1 10 Tf
+1 0 0 1 56 539 Tm
+(- Linear Regression assumes a mostly linear relationship between features and target.) Tj
+/F1 10 Tf
+1 0 0 1 56 525 Tm
+(- Housing prices are affected by nonlinear patterns, outliers, and feature) Tj
+/F1 10 Tf
+1 0 0 1 56 511 Tm
+(  interactions.) Tj
+/F1 10 Tf
+1 0 0 1 56 497 Tm
+(- Some important real-world factors, such as school quality, exact neighborhood, and) Tj
+/F1 10 Tf
+1 0 0 1 56 483 Tm
+(  market conditions, were not included in the dataset.) Tj
+/F1 10 Tf
+1 0 0 1 56 469 Tm
+(- The model may underfit because it is too simple for the full complexity of housing) Tj
+/F1 10 Tf
+1 0 0 1 56 455 Tm
+(  prices.) Tj
+/F2 13 Tf
+1 0 0 1 56 431 Tm
+(Future Improvements) Tj
+/F1 10 Tf
+1 0 0 1 56 408 Tm
+(- Apply feature scaling and compare results.) Tj
+/F1 10 Tf
+1 0 0 1 56 394 Tm
+(- Try Ridge Regression and Lasso Regression for regularized linear models.) Tj
+/F1 10 Tf
+1 0 0 1 56 380 Tm
+(- Use polynomial features or interaction terms to capture nonlinear patterns.) Tj
+/F1 10 Tf
+1 0 0 1 56 366 Tm
+(- Compare with Random Forest, Gradient Boosting, or XGBoost models.) Tj
+/F1 10 Tf
+1 0 0 1 56 352 Tm
+(- Use cross-validation for more reliable performance estimation.) Tj
+/F1 10 Tf
+1 0 0 1 56 338 Tm
+(- Improve feature engineering with stronger location-based features.) Tj
+/F1 10 Tf
+1 0 0 1 56 314 Tm
+(Overall, this project is a clean portfolio-style introduction to regression modeling and) Tj
+/F1 10 Tf
+1 0 0 1 56 300 Tm
+(the machine learning workflow.) Tj
+ET
+endstream
+endobj
+15 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+16 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 17
+0000000000 65535 f 
+0000000016 00000 n 
+0000000065 00000 n 
+0000000154 00000 n 
+0000000292 00000 n 
+0000002269 00000 n 
+0000002407 00000 n 
+0000004605 00000 n 
+0000004743 00000 n 
+0000007117 00000 n 
+0000007256 00000 n 
+0000009586 00000 n 
+0000009726 00000 n 
+0000012143 00000 n 
+0000012283 00000 n 
+0000014838 00000 n 
+0000014909 00000 n 
+trailer
+<< /Size 17 /Root 1 0 R >>
+startxref
+14985
+%%EOF
